@@ -5,7 +5,7 @@ import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommun
 import CupertinoButtonBlackTextColor from "../components/CupertinoButtonBlackTextColor";
 import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
 
-function SignUp(props) {
+export const SignUp= ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.pleaseSignUpStack}>
@@ -56,12 +56,16 @@ function SignUp(props) {
         <CupertinoButtonBlackTextColor
           caption="Sign In"
           style={styles.cupertinoButtonBlackTextColor1}
+          onPress={() => navigation.navigate('SignIn')}
+
         ></CupertinoButtonBlackTextColor>
         <Text style={styles.haveAnAccount}>Have an account ?</Text>
       </View>
       <CupertinoButtonSuccess
         caption="Sign in"
         style={styles.cupertinoButtonSuccess1}
+        onPress={() => navigation.navigate('SignIn')}
+
       ></CupertinoButtonSuccess>
     </View>
   );
@@ -227,4 +231,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SignUp;
+

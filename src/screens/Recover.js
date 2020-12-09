@@ -4,7 +4,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
 import CupertinoButtonBlackTextColor from "../components/CupertinoButtonBlackTextColor";
 
-function Recover(props) {
+export const Recover= ({  }) => {
   return (
     <View style={styles.container}>
       <View style={styles.recoverAccountStack}>
@@ -31,6 +31,7 @@ function Recover(props) {
         <CupertinoButtonBlackTextColor
           caption="Sign In"
           style={styles.cupertinoButtonBlackTextColor1}
+          onPress={() => navigation.navigate('SignIn')}
         ></CupertinoButtonBlackTextColor>
       </View>
     </View>
@@ -129,4 +130,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Recover;
+

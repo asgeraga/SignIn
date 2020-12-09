@@ -4,7 +4,8 @@ import { StyleSheet, TouchableOpacity, Text } from "react-native";
 function CupertinoButtonSuccess(props) {
   return (
     <TouchableOpacity style={[styles.container, props.style]}>
-      <Text style={styles.caption}>{props.caption || "Button"}</Text>
+      <Text style={styles.caption}
+       onPress={() => navigation.navigate('Recover')}>{props.caption || "Button"}</Text>
     </TouchableOpacity>
   );
 }

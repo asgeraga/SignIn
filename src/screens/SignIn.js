@@ -4,7 +4,8 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 import CupertinoButtonSuccess from "../components/CupertinoButtonSuccess";
 import CupertinoButtonBlackTextColor from "../components/CupertinoButtonBlackTextColor";
 
-function SignIn(props) {
+export const SignIn= ({ navigation }) => {
+  
   return (
     <View style={styles.container}>
       <View style={styles.pleaseSignInStack}>
@@ -32,16 +33,19 @@ function SignIn(props) {
       <CupertinoButtonSuccess
         caption="Sign in"
         style={styles.cupertinoButtonSuccess}
+        
       ></CupertinoButtonSuccess>
       <CupertinoButtonBlackTextColor
         caption="Forgot password?"
         style={styles.cupertinoButtonBlackTextColor}
+        onPress={() => navigation.navigate('Recover')}
       ></CupertinoButtonBlackTextColor>
       <View style={styles.signInToManage1Stack}>
         <Text style={styles.signInToManage1}>Do not have a account ?</Text>
         <CupertinoButtonBlackTextColor
           caption="Sign Up"
           style={styles.cupertinoButtonBlackTextColor1}
+          onPress={() => navigation.navigate('SignUp')}
         ></CupertinoButtonBlackTextColor>
       </View>
     </View>
@@ -170,4 +174,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SignIn;
+

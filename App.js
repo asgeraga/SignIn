@@ -4,9 +4,9 @@ import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation"
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
-import SignIn from "./src/screens/SignIn";
-import SignUp from "./src/screens/SignUp";
-import Recover from "./src/screens/Recover";
+import {SignIn} from "./src/screens/SignIn";
+import {SignUp} from "./src/screens/SignUp";
+import {Recover} from "./src/screens/Recover";
 
 const DrawerNavigation = createDrawerNavigator({
   SignIn: SignIn,
